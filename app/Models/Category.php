@@ -84,11 +84,11 @@ class Category extends Model
             $perPage = intval(request('perPage'));
 
             if ($perPage) {
-                return $query->paginate($perPage);
+                return $query->paginate($perPage);//por ser el ultimo scope poner return
             }
         }
 
-        return $query->get();
+        return $query->get();//por ser el ultimo scope poner return
     }
 
 
